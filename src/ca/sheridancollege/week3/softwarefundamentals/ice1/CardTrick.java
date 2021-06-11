@@ -29,17 +29,17 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(Systems.in);
-        Card myCard = new Card();
+        Card luckyCard = new Card();
         System.out.println("Enter a card between 1 and 13:");
         int gValue = input.nextint();
-        myCard.setValue(gValue);
+        luckyCard.setValue(gValue);
         System.out.println("Enter a suit: 1(Hearts),2(Diamonds),3(Spades),4(Clubs)");
         int gSuits = input.nextint();
-        myCard.setSuit(Card.SUITS[gSuits-1]);
+        luckyCard.setSuit(Card.SUITS[gSuits-1]);
         //and search magicHand here
         boolean match = true;
         for (Card magicHand1 : magicHand) {
-            if (myCard.getValue() == magicHand1.getValue() && myCard.getSuit().equals(magicHand1.getSuit())) {
+            if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit())) {
                 match = true;
                 break;
             } else {
